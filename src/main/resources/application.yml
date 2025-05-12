@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        globally_quoted_identifiers=true:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: false
+    show-sql: true
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  liquibase:
+    change-log: db/changelog/master-changelog.xml
+  security:
+    jwt:
+      secret: ${JWT_SECRET_PHRASE:jwtsecretphrase_jwtsecretphrase_jwtsecretphrase_jwtsecretphrase_jwtsecretphrase}
+      expired: 3600000
+  data:
+    redis:
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      host: ${SPRING_DATA_REDIS_HOST}
+  cache:
+    type: redis
+
+

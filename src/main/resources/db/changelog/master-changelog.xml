@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd"
+        objectQuotingStrategy="QUOTE_ALL_OBJECTS">
+
+    <include file="changelogs/202505-1-create-table-user.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/202505-2-create-table-account.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/202505-3-create-table-email-data.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/202505-4-create-table-phone-data.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/202505-5-add-password-check.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/202505-6-add-balance-check.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>
